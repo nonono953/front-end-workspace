@@ -1,0 +1,83 @@
+
+
+/* 6. 자식 선택자와 자손 선택자
+
+/* 7. 속성 선택자 */
+/* div 요소들 중 name 속성값이 name1과 "일치"하는 요소 */
+
+div[name="name1"]{
+    backgroud: orange;
+
+}
+
+div[name~="name1"]{          /* 경수. ~은 호환이라는 뜻 */
+    backgroud: yellow; 
+}
+/* div 요소들 중 class 속성값이 -c가 "포함"되어있는 요소 */
+div[class*="-c"]{
+    color: red;
+}
+
+/* div 요소들 중에서 name 속성값이 na로 "시작"되는 요소 */
+div[name^"na"] {
+    background: blue;
+}
+/* div 요소들 중에서 class 속성값이 로 "시작"되는 요소 */
+
+div[class|="class"]{
+    background: cyan;
+}
+
+/* div 요소들 중에서 class 속성값이 ss로 "시작"되는 요소 */
+div[class$|="ss"]{
+    color: white;
+}
+
+/* 8. 형제 선택자
+
+* a + b : a 요소 뒤에 있는 b 요소 "하나만" 선택 */
+
+#test2 + p {
+    background: pink; /* 제대로 선택X(바로 뒤에 있는 요소가 아님*/
+}
+
+#test2 ~ div {
+    background: beige;
+}
+
+#test2 ~ p {
+    background: deeppink;
+}
+cursor: pointer;
+}
+#active-test:active {
+    background: yellow;
+    color: red:
+
+/* :hover : 사용자가 마우스를 올려놓은 요소 */    
+#hover-test:hover {
+    background: maroon;
+    color: white;
+}
+#hover-test:hover {
+<input type="chechbox" id="apple" checked />
+label for="apple">사과</label>
+label type="checkbox"> id="banana" 
+<label for="bana"
+</ㅣ뮤디>
+
+/*10. 상태 선택자 */
+input[type="checkbox"]:checked {
+    width: 20px;
+    height: 20px;
+}
+input[type="checkbox"]:checked + label
+font-size: 20px;
+
+button:disabled {
+    background: yellowgreen;
+}
+button:enabled {
+    background: violet
+
+}
