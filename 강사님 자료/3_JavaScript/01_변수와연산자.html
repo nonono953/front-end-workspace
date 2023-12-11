@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 출력
+      // document는 html. write는 함수. 객체안에는 변수, 함수가 있다. write는 변수 write()는 함수이다.
+      // document.write(111);는 출력.
+      // console.log(222);     는 window.console.log(222);이다.
+      //   document.write(111);
+      //   console.log(222);
+      //   alert(333);
+      /*
+    여러 줄 주석 가능!!
+    */
+    </script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- <i class="fa-brands fa-apple"></i> -->
+    <!-- var, const, let -->
+
+    <h1>변수</h1>
+    <p>어떠한 값을 저장하는 공간</p>
+    <script>
+      // 옛날 방식 - 거의 사용 X
+      var varA = 100; // var 변수 = 값;
+      console.log(varA);
+      varA = "ㅋㅋㅋ";
+      console.log(varA); // ㅋㅋㅋ
+
+      // 상수 - 값을 수정할 수 없다. (자주 사용)
+      const constB = 200; // const 변수 = 값;
+      // 경수. "="같다가 아니라 그 값을 담아내는 거다.
+      console.log(constB); // 200
+      //   constB = 300; //Uncaught TypeError
+      let letC = 300;
+      // 변수 - 값을 수정할 수 있다. (가끔 사용)
+      console.log(letC); //300
+      letC = "zzz";
+      console.log(letC); //zzz
+
+      //   typeof: 데이터 타입 확인 //경수. 즉 문자야? 숫자야?라고따지는거.
+      console.log(typeof constB); // number
+      console.log(typeof letC); // string
+    </script>
+
+    <!-- 기본 데이터 타입 -->
+    <!-- 문자열 -->
+    <script></script>
+  </body>
+</html>

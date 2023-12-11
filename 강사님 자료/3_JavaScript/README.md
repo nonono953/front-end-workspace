@@ -1,0 +1,29 @@
+# 자바스크립트
+
+- 웹 브라우저에서 읽고 실행되는 언어 <!-- 웹브라우저에서 읽히는 언어는 자바스크립트가 유일하다 -->
+- 보안성이 없음
+- html 내에 작성
+- 대소문자 구분 엄격
+
+## 적용 방법
+
+1. 내부 스크립트
+
+- html 문서내에 스크립트 정의 후 직접 작성
+- 필요한 위치에
+
+````html
+<script type="text/javascript">
+  자바스크립트 코드 작성
+</script>
+
+2. 외부 스크립트 - 스크립트를 다른 문서에 작성하고 "파일명. js"로 저장 - 효과를
+적용할 문서에 ```html
+<script type="text/javascrpt"
+src="https://kit.fontawesome.com/4602e82315.js"
+crossorigin="anonymous"
+></script>
+<!-- crossorigin: 뒤에서 자세히 나오고 일단 그냥 갖다 쓰는 구나 -->
+다른 문장 작성 금지
+</script>
+````
