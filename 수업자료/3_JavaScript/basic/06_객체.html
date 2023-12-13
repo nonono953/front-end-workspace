@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>객체(Object)</h1>
+
+    <!-- 객체 생성 -->
+    <script>
+        const person = {};
+        const person2 = new Object(); /* 거의 안씀! */ // <- 경수. new는 왜?
+
+        console.log(person);
+        console.log(person2);
+
+        /* 변수: 속성, 특징 들 추가 */
+        person.name = "권예빈";
+        person.age = 9;
+
+        /* 함수: 기능 들 추가 */
+        person.hello = function () {
+          console.log("안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!");
+        };
+        console.log(person);
+        console.log(person.age); //person의 age 값
+        person.hello();
+
+        const person3= {}
+        person.hello = function () {
+          console.log("안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!");
+        };
+        console.log(persdon);
+        console.log(persdon.age); //person의 age 값
+        person.hello();
+
+        const person3
+
+      /* const 변수 = {
+          키: 값,
+          키: 값,
+          ...
+      }
+
+
+      *객체에 추가 & 수정
+      변수, 키 = 값;
+
+      *데이터에 접근
+      변수, 키 ;
+    </script>
+
+    <!-- 생성자(constructor)    -->
+    <script></script>
+  </body>
+</html>

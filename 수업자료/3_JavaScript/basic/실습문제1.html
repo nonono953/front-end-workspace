@@ -6,6 +6,18 @@
     <title>Document</title>
   </head>
   <body>
+
+    <!-- 
+      변수 명명 규칙
+      1) 변수명에는 문자, 숫자, 기호는 $, _만 사용    <- 필수
+      2) 첫글자에는 숫자 금지     <- 필수
+      3) 예약어(const, if, switch, ...) 금지    <- 필수
+      4) 표기법 대로 사용 - camelCase(낙타표기법)   ex) numberResult  스네이크표기법 number_result 
+      PascalCase, NumberResult        <- 권고
+      5) 상수(const로 표시한 것 X)는 PI <--- 대문자 + snake_case
+    -->
+
+
     <!-- 
         Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
            - 파운드 = 킬로그램 * 2.2
@@ -62,7 +74,7 @@
     <script>
       const age = 40
       const time = 2023 - age
-      console.log(time);
+      console.log(time);   // console.log(2023 - age);    <-로 해도 된다.
     </script>
 
     <!-- 
