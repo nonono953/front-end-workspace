@@ -20,9 +20,9 @@
               삼각형의 넓이 = (삼각형의 너비 * 삼각형의 높이) / 2;
     -->
     <script>
-      const triangle = function (a, b) {
-        return (a * b) / 2;
-      };
+      function triangle(width, height) {
+        return (width * height) / 2;
+      }
       console.log(triangle(5, 8)); // 20
       console.log(triangle(3, 8)); // 12
     </script>
@@ -32,31 +32,28 @@
              원의 넓이 = 반지름 * 반지름 * 3.14;
     -->
     <script>
-      const round = (a) => {
-        return 2 * a * 3.14;
-      };
-      const area = (a) => {
-        return a * a * 3.14;
-      };
+      function round(r) {
+        return 2 * r * 3.14;
+      }
       console.log(round(2)); // 12.56
+
+      function area(r) {
+        return r * r * 3.14;
+      }
       console.log(area(3)); // 28.26
     </script>
 
     <!-- Q4. 시작 수(n1)과 끝 수(n2)가 주어졌을 때 n1 ~ n2의 합계를 구하는 함수를 만들어 주세요 -->
     <script>
-      function sum(a, b) {
-        sum = 0;
-        for (i = a; i <= b; i++) {
-          return (sum += i);
+      function sum(n1, n2) {
+        let total = 0;
+        for (let i = n1; i <= n2; i++) {
+          total += i;
         }
+        return total;
       }
       console.log(sum(10, 20)); // 165
       console.log(sum(100, 200)); // 15150
-
-      function sum(...args) {
-      console.log(args);
-
-      sum(10, 20);   // [10, 20] 이렇게 배열이 나오긴 하는데 이렇게까지는 안한다.
     </script>
 
     <!-- Q5. 물건 구매가가 주어졌을 때 할인율에 따라 지불 금액을 계산하는 함수를 만들어 주세요. 
@@ -67,21 +64,49 @@
     -->
     <script>
       function calculate(price) {
-        if (price >= 10000 && price < 50000);
-        return price * 0.95;
-      }
-      function calculatee(price) {
-        if (price >= 50000 && price < 100000);
-        return price * 0.925;
-      }
-      function calculate(price) {
-        if (price >= 100000);
-        return price * 0.9;
+        // if (price >= 100000) {
+        //   // 10만원 이상 -> 뒤에 나오는 조건은 다 10만원 미만
+        //   return price * 0.9;
+        // } else if (price >= 50000) {
+        //   // 5만원 이상 -> 뒤에 나오는 조건은 다 5만원 미만
+        //   return price * 0.925;
+        // } else if (price >= 10000) {
+        //   // 만원 이상 -> 그 외에는 만원 미만
+        //   return price * 0.95;
+        // }
+        // return price;
+
+        // let rate = 0;
+        let rate = 1;
+        if (price >= 100000) {
+          // rate = 10;
+          rate = 0.9;
+        } else if (price >= 50000) {
+          // rate = 7.5;
+          rate = 0.925;
+        } else if (price >= 10000) {
+          // rate = 5;
+          rate = 0.95;
+        }
+        // return price * ((100 - rate) / 100);
+        return price * rate;
       }
       console.log(calculate(20000)); // 19000
       console.log(calculate(65000)); // 60125
+    </script>
 
-      //return을 하는 순간 빠져나가버린다.return 하나만으로도 작성 가능하다.이미 다 빠져나가버려서 return price를 적는 순간
+    <!-- console.log("합계")
+         console.log("합계", 12)
+         console.log("합계", 12, "평균") -->
+    <!-- 가변 매개변수(파라미터) : 안 써요! -->
+    <script>
+      function sum(...args) {
+        console.log(args);
+      }
+      sum(10, 20);
+      sum(10, 20, 30);
+      sum(10, 20, 30, 40);
+      sum(10, 20, 30, 40, 50);
     </script>
   </body>
 </html>
