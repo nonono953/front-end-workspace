@@ -21,10 +21,10 @@
         return a + b;
       }
       const result = plus(10, 20); // 30
-      console.log(result); // console에 출력!    <- 경수? log안에 'const result'가 안들어가고 result가 들어가는 이유는?
+      console.log(result); // console에 출력!
 
       const sample1 = sample();
-      console.log(sample1); // undefined -> return 값이 없어서!   <- 경수? 그럼 어떻게 해야하지?
+      console.log(sample1); // undefined -> return 값이 없어서!
 
       // 두수의 값을 더하는 계산
       console.log(plus(3, 7));
@@ -37,8 +37,8 @@
       const num1 = 100;
 
       function sample2() {
-        const num1 = 200; // 경수.  num1 = 100으로 이미 선포하지?
-        console.log(`sample2 내부 : ${num1}`); // 200     <- 경수? 왜 '외부'로 먼저 나오는지?
+        const num1 = 200;
+        console.log(`sample2 내부 : ${num1}`); // 200
 
         function sample3() {
           const num2 = 30000;
@@ -48,7 +48,7 @@
       console.log(`sample2 외부 : ${num1}`); // 100
       //   console.log(`num2 : ${num2}`); // 오류!
 
-      sample2(); // <- 이거 여부가 왜오류 여부인거지?
+      sample2();
     </script>
 
     <!-- 익명 함수 -->
@@ -74,41 +74,30 @@
       // forEach : 값을 하나씩 가져올 수 있다.
       // 배열.forEach((값, 인덱스, 배열) => {});
       arr.forEach((data, index) => {
-        // <- 경수. 배열은 왜 안들어가 있나?
         console.log(data);
         console.log(index);
         // console.log(array);
       });
 
       // map : 리턴한 값들을 기반으로 새로운 배열을 만든다.
-      // 배열.map((값, 인덱스, 배열) => {});         // <- 경수. 인덱스, 배열은 왜 안들어가 있나?
-      const arr2 = arr.map(function (data, index, array) {
-        console.log(index);
-        console.log(array);
-        // <- 여기는 왜 function이 들어갔는지? index array추가했는데
+      // 배열.map((값, 인덱스, 배열) => {});
+      const arr2 = arr.map(function (data) {
         return data * 2;
       });
-
       console.log(arr2);
 
       // filter : 리턴한 값들이 true인 것들만 모아서 새로운 배열을 만든다.
       // 배열.filter((값, 인덱스, 배열) => {});
-      const arr3 = arr.filter((data, index, array) => {
-        console.log(index);
-        console.log(array);
-        // <- 경수. 인덱스, 배열은 왜 안들어가 있나?
+      const arr3 = arr.filter((data) => {
         return data % 2 === 0;
       });
       console.log(arr3);
 
       // reduce : 하나의 결과값을 반환한다.
       // 배열.reduce((누적된값, 값, 인덱스, 배열) => {}, 초기값);
-      const result2 = arr.reduce(function (accumulator, data, array) {
-        console.log(data);
-        console.log(array);
-        // <- 여기는 왜 function이 들어갔는지? index array추가했는데
+      const result2 = arr.reduce(function (accumulator, data) {
         return accumulator + data;
-      }, 2); // <- 경수. 인덱스, 배열은 왜 안들어가 있나?
+      }, 2);
       console.log(result2); // 배열에 있는 값들이 다 합친 값
     </script>
   </body>

@@ -61,7 +61,7 @@
     </script>
 
     <!-- for in
-        for(const 인덱스 in 배열) {}               //경수. 인덱스? 여기 예문은?
+        for(const 인덱스 in 배열) {}
     -->
     <script>
       for (const index in movies) {
@@ -71,11 +71,10 @@
     </script>
 
     <!-- for of
-        for(const 값 of 배열) {}         
+        for(const 값 of 배열) {}
     -->
     <script>
       for (const value of movies) {
-        //경수. value?
         console.log(value);
       }
     </script>
@@ -101,10 +100,9 @@
 
       let check = 0;
       console.log(check);
-      while (confirm("계속 진행하시겠습니까?")) {
-        //경수. 여기서.
-        console.log(++check);
-      }
+      //   while (confirm("계속 진행하시겠습니까?")) {
+      //     console.log(++check);
+      //   }
     </script>
 
     <!-- break와 continue -->
@@ -112,10 +110,9 @@
       // 1 ~ 10까지 홀수만 출력
       for (let number = 1; number <= 10; number++) {
         if (number === 8) {
-          break; // 경수. 여기서
+          break;
         }
         if (number % 2 == 0) {
-          // 경수. 여기서?
           continue;
         }
         console.log(number);
@@ -124,7 +121,6 @@
       // while문!
       let number = 0;
       while (true) {
-        //경수. 0이 참이라는 의미는?
         number++;
         if (number == 10) break;
         if (number % 2 == 0) continue;
@@ -141,7 +137,6 @@
       ];
       // 1 ~ 9 순서대로 출력해보세요 (i, j, k..)
       for (let i = 0; i < arr.length; i++) {
-        //경수. 어디서 0에서 1이되지?
         for (let j = 0; j < arr[i].length; j++) {
           console.log(arr[i][j]);
         }
