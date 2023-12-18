@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      form {
+        border: 1px solid #ccc;
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+      form span {
+        display: block;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="signup_form" method="POST">
+      <fieldset>
+        <legend></legend>
+        <label for="userId">아이디 : </label>
+        <input 
+        type="text" 
+        id="userId" 
+        name="userId"
+        required autofocus />
+        <br /> 첫글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4~12자로 입력하시오.
+        <br />
+        <br>
+        <label for="userPwd">비밀번호 : </label>
+        <input
+          type="password"
+          id="userPwd"
+          name="userPwd"
+        />
+        <br /> 영문자, 숫자, 특수문자 포함하여 총 8~15자로 입력하시오.
+        <br />
+        <br>
+        <label for="userPwdCheck">비밀번호 확인: </label>
+        <input
+          type="password"
+          id="userPwdCheck"
+          name="userPwd"
+        />
+        <br /> 위의 비밀번호와 일치하게 입력하시오.
+        <br />
+        <br>
+          <label for="userName">이름 : </label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            required autofocus />
+          <br /><br />
+          <br>
+          <label for="email">이메일 : </label>
+          <input type="email" id="email" name="email" />
+          <br>
+          이메일 형식에 맞춰서 입력하시오.
+          <br>
+          <br>
+
+
+          <label for="bobby">취미 : </label>
+          <input type="text" id="bobby" name="habby2" placeholder="축구, 농구, 야구, 독서 등 "
+          />
+
+<br>
+<br>
+          <form action="">
+            <label for="national">거주지 : </label>
+      
+            <select name="national" id="national">
+                <option value="pusan">부산</option>
+                <option value="daekoo"></option>대구</option>
+                <option value="kyanggu">광주</option>
+              </optgroup>
+              <option selected>서울</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="회원가입" />
+            <button type="reset">취소</button>
+          </form>
+          <script>
+            userId.addEventListener("input", function(e) {
+              console.log(userId.value);
+            });
+            const regExp = /^[a-zA-Z][a-zA-Z]
+          </script>
+        </fieldset>
+          </body>
+          종이 확인.
+          양치, 
+          관악고용센터 전화, 
+          책, 로그인, 등 절차
+          번호.
+</html>
